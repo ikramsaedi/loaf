@@ -1,0 +1,116 @@
+:root {
+    --dark-color: #673A02; 
+  }
+  
+  #canvas {
+    background: pink;
+    border: solid 1px black;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #face {
+    background: orange;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  #ears {
+    display: flex;
+  }
+  
+  .ear {
+    position: relative;
+    top: 20px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: orange;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .ear:first-child {
+     transform: rotate(-30deg);
+  }
+  
+  .ear:last-child {
+    transform: rotate(30deg);
+    left: 50px;
+  }
+  
+  #eyes {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  .eye {
+    position: relative;
+    top: 25px;
+    left: 35px;
+    background: transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 25px;
+    border-top: solid 5px var(--dark-color);
+  }
+  
+  #nose {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    width: 20px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .lips {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 16px;
+  }
+  
+  .lip {
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    border-right: solid 2px var(--dark-color);
+    border-radius: 50%;
+  }
+  
+  .lip:first-child {
+     transform: rotate(45deg)
+  }
+  
+  .lip:last-child {
+     transform: rotate(135deg)
+  }
+  
+  .whiskers {
+    display: flex;
+    column-gap: 30px;
+  }
+  
+  .whisker {
+    width: 60px;
+    height: 2px;
+    background: white;
+    border-radius: 40%;
+    transform-origin: top right;
+  }
+  
+  .whisker:nth-child(1) {
+    transform: rotate(10deg);
+  }
+  
+  .whisker:nth-child(3) {
+    transform: rotate(-10deg);
+  }
+  
+  .whiskers-right {
+    transform: rotate(180deg)
+  }
