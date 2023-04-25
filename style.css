@@ -1,116 +1,191 @@
 :root {
-    --dark-color: #673A02; 
-  }
-  
-  #canvas {
-    background: pink;
-    border: solid 1px black;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #face {
-    background: orange;
-    width: 150px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  #ears {
-    display: flex;
-  }
-  
-  .ear {
-    position: relative;
-    top: 20px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: orange;
-    width: 50px;
-    height: 50px;
-  }
-  
-  .ear:first-child {
-     transform: rotate(-30deg);
-  }
-  
-  .ear:last-child {
-    transform: rotate(30deg);
-    left: 50px;
-  }
-  
-  #eyes {
-    display: flex;
-    column-gap: 20px;
-  }
-  
-  .eye {
-    position: relative;
-    top: 25px;
-    left: 35px;
-    background: transparent;
-    border-radius: 50%;
-    width: 30px;
-    height: 25px;
-    border-top: solid 5px var(--dark-color);
-  }
-  
-  #nose {
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    width: 20px;
-    height: 10px;
-    background: pink;
-    border-radius: 50%;
-    position: relative;
-    margin: auto;
-  }
-  
-  .lips {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 16px;
-  }
-  
-  .lip {
-    background: transparent;
-    width: 20px;
-    height: 20px;
-    border-right: solid 2px var(--dark-color);
-    border-radius: 50%;
-  }
-  
-  .lip:first-child {
-     transform: rotate(45deg)
-  }
-  
-  .lip:last-child {
-     transform: rotate(135deg)
-  }
-  
-  .whiskers {
-    display: flex;
-    column-gap: 30px;
-  }
-  
-  .whisker {
-    width: 60px;
-    height: 2px;
-    background: white;
-    border-radius: 40%;
-    transform-origin: top right;
-  }
-  
-  .whisker:nth-child(1) {
-    transform: rotate(10deg);
-  }
-  
-  .whisker:nth-child(3) {
-    transform: rotate(-10deg);
-  }
-  
-  .whiskers-right {
-    transform: rotate(180deg)
-  }
+  --dark-color: #673a02;
+}
+
+body {
+  background: pink;
+}
+
+#canvas {
+  background: pink;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#face {
+  background: orange;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+#ears {
+  display: flex;
+}
+
+.ear {
+  position: relative;
+  top: 20px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: orange;
+  width: 50px;
+  height: 50px;
+}
+
+.ear:first-child {
+  transform: rotate(-30deg);
+}
+
+.ear:last-child {
+  transform: rotate(30deg);
+  left: 50px;
+}
+
+#eyes {
+  display: flex;
+  column-gap: 20px;
+}
+
+.eye {
+  position: relative;
+  top: 25px;
+  left: 35px;
+  background: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 25px;
+  border-top: solid 5px var(--dark-color);
+}
+
+#nose {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  width: 20px;
+  height: 10px;
+  background: pink;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+}
+
+.lips {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 16px;
+}
+
+.lip {
+  background: transparent;
+  width: 20px;
+  height: 20px;
+  border-right: solid 2px var(--dark-color);
+  border-radius: 50%;
+}
+
+.lip:first-child {
+  transform: rotate(45deg);
+}
+
+.lip:last-child {
+  transform: rotate(135deg);
+}
+
+.whiskers {
+  display: flex;
+  column-gap: 30px;
+}
+
+.whisker {
+  width: 60px;
+  height: 2px;
+  background: white;
+  border-radius: 40%;
+  transform-origin: top right;
+}
+
+.whisker:nth-child(1) {
+  transform: rotate(10deg);
+}
+
+.whisker:nth-child(3) {
+  transform: rotate(-10deg);
+}
+
+.whiskers-right {
+  transform: rotate(180deg);
+}
+#cat-face {
+  z-index: 5;
+  position: relative;
+}
+
+#body-container {
+  position: relative;
+  top: -50px;
+}
+
+#body {
+  z-index: 1;
+  width: 150px;
+  height: 200px;
+  background: orange;
+  border-radius: 50% 50% 20% 20%;
+}
+
+.legs {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  top: 50%;
+  width: 100%;
+}
+
+.leg {
+  border-bottom: var(--dark-color) 1px solid;
+  border-left: var(--dark-color) 1px solid;
+  border-right: var(--dark-color) 1px solid;
+  border-radius: 0% 0% 40% 40%;
+  width: 30px;
+  height: 110px;
+  background: orange;
+}
+
+#tail-container {
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+}
+
+.tail:nth-child(1) {
+  width: 50px;
+  height: 30px;
+  /*   border: 1px solid black; */
+  background: orange;
+  border-radius: 0 80% 0 10%;
+}
+
+.tail:nth-child(2) {
+  width: 25px;
+  position: absolute;
+  right: 0;
+  height: 30px;
+  /*   border: 1px solid black; */
+  background: radial-gradient(
+    circle 20px at left,
+    transparent 0,
+    transparent 70%,
+    orange 71%,
+    orange 100%
+  );
+  /*     border-right: 5px solid orange; */
+}
+
+.tail:nth-child(3) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: orange;
+}
